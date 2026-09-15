@@ -143,42 +143,84 @@
 # player1.update_score(60)
 
 
-# Task 4
+# # Task 4
 
-'''
-Task 4 (Conditional Logic): Create a Temperature class. If the input 
-temperature is above 37°C, the method check_health should print 
-“Fever”, otherwise “Normal”
-'''
+# '''
+# Task 4 (Conditional Logic): Create a Temperature class. If the input 
+# temperature is above 37°C, the method check_health should print 
+# “Fever”, otherwise “Normal”
+# '''
 
-class Temperature:
+# class Temperature:
     
-    # Constructor Method
+#     # Constructor Method
     
-    def __init__(self, temp):
+#     def __init__(self, temp):
         
-        self.temperature = temp
+#         self.temperature = temp
         
-    # Instance Method for Check Health
+#     # Instance Method for Check Health
     
-    def check_health(self):
+#     def check_health(self):
         
-        if self.temperature > 37:
-            print("Fever")
-        else:
-            print('Normal')
+#         if self.temperature > 37:
+#             print("Fever")
+#         else:
+#             print('Normal')
             
-# Take Input for Temperature
+# # Take Input for Temperature
 
-temp = float(input('Enter Your Temperature: '))
+# temp = float(input('Enter Your Temperature: '))
+
+# # Create an Object
+
+# temperature1 = Temperature(temp)
+
+# # Call Check Health
+
+# temperature1.check_health()
+
+
+# Task 5
+
+'''
+Task 5 (Inheritance): Create a parent class Vehicle with a method move().
+Create a child class Airplane that inherits from Vehicle and adds a unique method fly().
+'''
+
+# Create Parent Class Vehicle
+
+class Vehicle:
+    
+    # Instance Method
+    
+    def move(self):
+        
+        print("The vehicle is moving.")
+
+
+
+# Create Child Class Airplane
+
+class Airplane(Vehicle):    # Inheritance Vehicle Class
+    
+    # Instance Method
+    
+    # Unique Method fly
+    
+    def fly(self):
+        
+        print("The Airplane Flying")
+        
 
 # Create an Object
 
-temperature1 = Temperature(temp)
+airplane1 = Airplane()
 
-# Call Check Health
+# Call Inheritance Method
 
-temperature1.check_health()
+airplane1.move()
 
+# Call Unique Method
 
-
+airplane1.fly()
