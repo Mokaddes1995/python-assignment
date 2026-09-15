@@ -1,0 +1,1 @@
+book.borrow()               # Error: Book not available
