@@ -81,10 +81,65 @@ class Circle:
         print(f"Perimeter: {self.calculated_perimeter():.6f}")
         
 
-# Crate a Object
+"Create an Object"
 
 circle1 = Circle(50)
 
 # Display Information
 
 circle1.show_information()
+
+
+# Task 3
+
+'''
+Task 3 (Object Manipulation): Create a Player class with name and score. 
+Create an object, print the initial score, update the score with new value, and print the updated score.
+'''
+
+class Player:
+    
+    # Constructor Method
+    
+    def __init__(self, name, score):
+        
+        self.name = name
+        self.score = score
+        
+    # Create Instance Method for Update Score
+    
+    def update_score(self, new_score):
+        
+        # Give Validation for Negative Value
+        
+        if new_score < 0:
+            
+            raise ValueError ('Score Must Be 0 and Above!!')
+        
+        else:
+            
+            self.score = new_score
+            
+            print(f"Updated Score: {self.score}")
+    
+    # Instance Method for Printing Information
+    
+    def show_info(self):
+        
+        print(f"Name: {self.name}")
+        print(f"Score: {self.score}")
+        
+    
+# Create an Object
+
+player1 = Player('Mahir', 30)
+
+# Print Name and Initial Score
+
+player1.show_info()
+
+# Print Updated Score
+
+player1.update_score(60)
+
+
