@@ -384,31 +384,35 @@ class Library():
     
     def __init__(self):
         
-        self.book = []
+        self.books = []
     
             
     # Instance Method
     
     # Method Add
     
-    def add_method(self, books):
+    def add_method(self, book):
         
-        self.book.append(self.books)
+        self.books.append(self.book)
     
     # Method borrow book
     
-    def borrow_book(self):
+    def borrow_book(self, isbn):
         
-        if self.is_availability:
+        for book in self.books:
             
-            self.is_availability = False
+            if book.isbn == isbn:
             
-            print("Borrow the Book")
-            
-        else:
-            
-            print("Already borrowed")
-    
+                if self.is_availability:
+                
+                    self.is_availability = False
+                
+                    print("Borrow the Book")
+                
+                else:
+                
+                    print("Already borrowed")
+        
     # Method return book
     
     def return_book(self):
