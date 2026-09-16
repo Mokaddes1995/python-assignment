@@ -366,7 +366,7 @@ class Book:
     
     # Constructor Method
     
-    def __init__(self, title, author, isbn, is_availability):
+    def __init__(self, title, author, isbn):
         
         self.title = title
         self.author = author
@@ -393,7 +393,7 @@ class Library():
     
     def add_method(self, book):
         
-        self.books.append(self.book)
+        self.books.append(book)
     
     # Method borrow book
     
@@ -403,48 +403,105 @@ class Library():
             
             if book.isbn == isbn:
             
-                if self.is_availability:
+                if book.is_available:
                 
-                    self.is_availability = False
+                    book.is_available = False
                 
                     print("Borrow the Book")
                 
                 else:
                 
                     print("Already borrowed")
+                    
+                return
+        
+        print("Book Not Found!!")
+
+        
         
     # Method return book
     
-    def return_book(self):
+    def return_book(self, isbn):
         
-        if not self.is_availability:
+        for book in self.books:
+                    
+            if book.isbn == isbn:
+        
+                if not book.is_available:
             
-            self.is_availability = True
+                    book.is_available = True
             
-            print("Book Return")
+                    print("Book Return")
             
-        else:
+                else:
             
-            print("The Book Already Returned!!!")
+                    print("Book Available!!!")
+                    
+                return
+        
+        print("Book Not Found!!")
     
     
     # Method display book
     
     def display_books(self):
         
-        print(f"Title: {self.title}")
-        print(f"Author: {self.author}")
-        print(f"ISBN: {self.isbn}")
-        print(f"Available:{self.is_availability}")
+        for book in self.books:
+           
+            print(f"Title: {book.title}")
+            print(f"Author: {book.author}")
+            print(f"ISBN: {book.isbn}")
+            print(f"Available: {book.is_available}")
+            print("--------------------")
+       
         
         
-# Crate Library Object
+# Crate Book Object
 
-book1 = Library('Python Programming', 'Jon Luise', 'A12756B', True)
+book1 = Book(
+    "Python Programming",
+    "Mark Lutz",
+    "9781234567890"
+)
 
-book1.display_books()
+book2 = Book(
+    "Clean Code",
+    "Robert Martin",
+    "9789876543210"
+)
 
-book1.add_method('Python', 'John Doe', 'A12756B', True)
+book3 = Book(
+    "The Pragmatic Programmer",
+    "Andrew Hunt",
+    "9780135957059"
+)
 
-book1.display_books()
-        
+
+# Create Library Object
+
+library = Library()
+
+# Add Book
+
+library.add_method(book1)
+
+library.add_method(book2)
+
+# Borrowed Book
+
+library.borrow_book("9789876543210")
+
+# Borrowed Same Book
+
+library.borrow_book("9789876543210")
+
+library.borrow_book("9789876543215")
+
+# Return Book
+
+library.return_book("9789876543210")
+
+# Display Information
+
+library.display_books()
+
