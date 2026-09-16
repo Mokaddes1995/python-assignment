@@ -496,4 +496,3 @@ property). Use super().__init__() to initialize the common properties in
 both child classes.
 '''
 
-        
