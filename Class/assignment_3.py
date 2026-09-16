@@ -226,221 +226,274 @@
 # airplane1.fly()
 
 
-# Section 2: Scenario-based Challenges
+# # Section 2: Scenario-based Challenges
+
+# '''
+
+# ATM System: Create a class named Class. The account should contain: 
+# Account number, Account holder name, Balance. Implement the following 
+# methods: deposit(), withdraw(), show_balance(). The system must: 
+# ○  Allow users to deposit and withdraw money. 
+# ○  Prevent withdrawal when the balance is insufficient. 
+# ○  Display the current balance. 
+# ○  Create at least two different accounts. 
+# ○  Perform transactions on both accounts. 
+
+# '''
+
+# class BankAccount:
+    
+#     # Constructor Method
+    
+#     def __init__(self, account_number, name, balance):
+#         self.account_number = account_number
+#         self.account_holder_name = name
+#         self.__balance = balance            # Encapsulation Method for Private Balance
+        
+#     # Instance Method 
+    
+#     # Method Show Balance
+    
+#     def show_balance(self):
+#         print(f"Balance: {self.__balance:.2f}")
+        
+#     # Method Deposit Balance
+    
+#     def deposit(self, amount):
+        
+#         # Validation for O and Negative amounts
+        
+#         if amount <= 0:
+#             raise ValueError("Amount Must be 1 and above!!")
+        
+        
+#         self.__balance += amount
+        
+#         print(f"${amount:.2f} Deposit Successful..")
+        
+#         self.show_balance()
+        
+        
+#     # Method Withdraw Balance
+    
+#     def withdraw(self, amount):
+        
+#         # Validation for 0 and Negative amounts
+        
+#         if amount <= 0:
+#             raise ValueError ("Amount Must be 1 and above!!")
+        
+#         # Prevent withdrawal when the balance is insufficient.
+        
+#         if amount > self.__balance:
+#             raise ValueError ('Insufficient Balance!!!')
+        
+#         self.__balance -= amount
+        
+#         print(f"${amount:.2f} Withdraw Successful..")
+        
+#         self.show_balance()
+    
+
+
+# # Create two different accounts.
+
+# ba1 = BankAccount(13456, "Md Mokaddes Hossain", 5000)
+
+# ba2 = BankAccount(13457, "Maimun Al Rafat", 10000)
+
+# # Display the current balance
+
+# ba1.show_balance()
+# ba2.show_balance()
+
+# # Deposit Money with Error Handling
+
+# try:
+#     ba1.deposit(5000)
+    
+# except ValueError as e:
+    
+#     print(e)
+    
+
+# try:
+#     ba2.deposit(3000)
+    
+# except ValueError as e:
+    
+#     print(e)
+    
+    
+# # Withdraw Money with Error Handling
+
+# try:
+#     ba1.withdraw(7000)
+    
+# except ValueError as e:
+    
+#     print(e)
+    
+
+# try:
+#     ba2.withdraw(12000)
+    
+# except ValueError as e:
+    
+#     print(e)
+    
+    
+
+
+# '''
+# Library Management System: Create two classes named Book and Library. 
+# In Book class, each book should contain: Title, Author, ISBN, Availability Status. 
+# In Library class, the library should provide methods to: 
+# add_method(), borrow_book(), return_book(), display_books(). The 
+
+# system should: 
+# ○  Allow books to be added to the library. 
+# ○  Display all available books. 
+# ○  Allow user to borrow a book 
+# ○  Prevent a book from being borrowed if it is already borrowed. 
+# ○  Allow borrowed books to be returned. 
+# ○  Update the availability status automatically. 
+# '''
+
+# # Create Book Class
+
+# class Book:
+    
+#     # Constructor Method
+    
+#     def __init__(self, title, author, isbn):
+        
+#         self.title = title
+#         self.author = author
+#         self.isbn = isbn
+        
+#         self.is_available = True  
+        
+
+
+# # Create Library Class
+
+# class Library():
+    
+#     # Constructor Method
+    
+#     def __init__(self):
+        
+#         self.books = [] # Empty List for Add Book
+    
+            
+#     # Instance Method
+    
+#     # Method Add
+    
+#     def add_method(self, book):
+        
+#         self.books.append(book) # append method use for add book self.books
+    
+#     # Method borrow book
+    
+#     def borrow_book(self, isbn):
+        
+#         for book in self.books:
+            
+#             if book.isbn == isbn:
+        
+#                 if book.is_available:
+            
+#                     book.is_available = False
+            
+#                     print("Borrow Book Successfully")
+            
+#                 else:
+            
+#                     print("Book Not Available")
+                    
+#                 return
+        
+#         print("Book Not Found")
+    
+#     # Method return book
+    
+#     def return_book(self, isbn):
+        
+#         for book in self.books:
+            
+#             if book.isbn == isbn:
+        
+#                 if not book.is_available:
+            
+#                     book.is_available = True
+            
+#                     print("Return Book Successful")
+            
+#                 else:
+            
+#                     print("Book Available")
+            
+#                 return
+        
+#         print("Book not Found")
+    
+    
+#     # Method display book
+    
+#     def display_books(self):
+        
+#         for book in self.books:
+#             print(f"Title: {book.title}")
+#             print(f"Author: {book.author}")
+#             print(f"ISBN: {book.isbn}")
+#             print(f"Availability: {"Yes" if True else "No"}")
+#             print('-' * 15)
+        
+        
+
+# # Crate Book Object
+
+# book1 = Book("Python Programming", "John Smith","ISBN001")
+
+# book2 = Book("Clean Code", "Robert C. Martin", "ISBN002")
+
+# book3 = Book("The Pragmatic Programmer", "Andrew Hunt", "ISBN003")
+
+
+# # Create Library Object
+
+# library = Library()
+
+# # Add Book
+
+# library.add_method(book1)
+# library.add_method(book2)
+# library.add_method(book3)
+
+# # Borrow Book
+
+# library.borrow_book("ISBN003")
+
+# # Prevent Duplicate Borrow same book borrow
+
+# library.borrow_book("ISBN003")
+
+# # Return Book
+
+# library.return_book("ISBN003")
+
+# # Display Information
+
+# library.display_books()
+
 
 '''
-
-ATM System: Create a class named Class. The account should contain: 
-Account number, Account holder name, Balance. Implement the following 
-methods: deposit(), withdraw(), show_balance(). The system must: 
-○  Allow users to deposit and withdraw money. 
-○  Prevent withdrawal when the balance is insufficient. 
-○  Display the current balance. 
-○  Create at least two different accounts. 
-○  Perform transactions on both accounts. 
-
+University Hierarchy: Create a Person parent class. Derive two classes 
+from it: Teacher (with a subject property) and Student (with a cgpa 
+property). Use super().__init__() to initialize the common properties in 
+both child classes.
 '''
 
-class BankAccount:
-    
-    # Constructor Method
-    
-    def __init__(self, account_number, name, balance):
-        self.account_number = account_number
-        self.account_holder_name = name
-        self.__balance = balance            # Encapsulation Method for Private Balance
-        
-    # Instance Method 
-    
-    # Method Show Balance
-    
-    def show_balance(self):
-        print(f"Balance: {self.__balance:.2f}")
-        
-    # Method Deposit Balance
-    
-    def deposit(self, amount):
-        
-        # Validation for O and Negative amounts
-        
-        if amount <= 0:
-            raise ValueError("Amount Must be 1 and above!!")
-        
-        
-        self.__balance += amount
-        
-        print(f"${amount:.2f} Deposit Successful..")
-        
-        self.show_balance()
-        
-        
-    # Method Withdraw Balance
-    
-    def withdraw(self, amount):
-        
-        # Validation for 0 and Negative amounts
-        
-        if amount <= 0:
-            raise ValueError ("Amount Must be 1 and above!!")
-        
-        # Prevent withdrawal when the balance is insufficient.
-        
-        if amount > self.__balance:
-            raise ValueError ('Insufficient Balance!!!')
-        
-        self.__balance -= amount
-        
-        print(f"${amount:.2f} Withdraw Successful..")
-        
-        self.show_balance()
-    
-
-
-# Create two different accounts.
-
-ba1 = BankAccount(13456, "Md Mokaddes Hossain", 5000)
-
-ba2 = BankAccount(13457, "Maimun Al Rafat", 10000)
-
-# Display the current balance
-
-ba1.show_balance()
-ba2.show_balance()
-
-# Deposit Money with Error Handling
-
-try:
-    ba1.deposit(5000)
-    
-except ValueError as e:
-    
-    print(e)
-    
-
-try:
-    ba2.deposit(3000)
-    
-except ValueError as e:
-    
-    print(e)
-    
-    
-# Withdraw Money with Error Handling
-
-try:
-    ba1.withdraw(7000)
-    
-except ValueError as e:
-    
-    print(e)
-    
-
-try:
-    ba2.withdraw(12000)
-    
-except ValueError as e:
-    
-    print(e)
-    
-    
-
-
-'''
-Library Management System: Create two classes named Book and Library. 
-In Book class, each book should contain: Title, Author, ISBN, Availability Status. 
-In Library class, the library should provide methods to: 
-add_method(), borrow_book(), return_book(), display_books(). The 
-
-system should: 
-○  Allow books to be added to the library. 
-○  Display all available books. 
-○  Allow user to borrow a book 
-○  Prevent a book from being borrowed if it is already borrowed. 
-○  Allow borrowed books to be returned. 
-○  Update the availability status automatically. 
-'''
-
-# Create Book Class
-
-class Book:
-    
-    # Constructor Method
-    
-    def __init__(self, title, author, isbn, is_availability):
-        
-        self.title = title
-        self.author = author
-        self.isbn = isbn
-        
-        self.is_available = True  
-        
-
-
-# Create Library Class
-
-class Library():
-    
-    # Constructor Method
-    
-    def __init__(self):
-        
-        self.book = []
-    
-            
-    # Instance Method
-    
-    # Method Add
-    
-    def add_method(self, books):
-        
-        self.book.append(self.books)
-    
-    # Method borrow book
-    
-    def borrow_book(self):
-        
-        if self.is_availability:
-            
-            self.is_availability = False
-            
-            print("Borrow the Book")
-            
-        else:
-            
-            print("Already borrowed")
-    
-    # Method return book
-    
-    def return_book(self):
-        
-        if not self.is_availability:
-            
-            self.is_availability = True
-            
-            print("Book Return")
-            
-        else:
-            
-            print("The Book Already Returned!!!")
-    
-    
-    # Method display book
-    
-    def display_books(self):
-        
-        print(f"Title: {self.title}")
-        print(f"Author: {self.author}")
-        print(f"ISBN: {self.isbn}")
-        print(f"Available:{self.is_availability}")
-        
-        
-# Crate Library Object
-
-book1 = Library('Python Programming', 'Jon Luise', 'A12756B', True)
-
-book1.display_books()
-
-book1.add_method('Python', 'John Doe', 'A12756B', True)
-
-book1.display_books()
         
