@@ -496,3 +496,72 @@ property). Use super().__init__() to initialize the common properties in
 both child classes.
 '''
 
+# Crate Parent Class Person
+
+class Person:
+    
+    # Constructor Method
+    
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+
+# Crate Child Class Teacher
+
+class Teacher(Person):
+    
+    # Constructor Method
+    
+    def __init__(self, name, age, subject):
+        
+        super().__init__(name, age) # Supper for inheritance Person class construction method
+        
+        self.subject = subject      # Extra Attribute
+        
+    
+    # Instance Method for Show Information of Teacher
+    
+    def show_info(self):
+        
+        print("\nPrint Teacher Information")
+        print('-' * 30)
+        print(f"\nName: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Subject: {self.subject}")
+
+
+# Second Child Class Student
+
+class Student(Person):
+    
+    # Constructor Method
+    
+    def __init__(self, name, age, cgpa):
+        
+        super().__init__(name, age)
+        
+        self.cgpa = cgpa
+        
+    # Instance Method for Show Information of Student
+        
+    def show_info(self):
+            
+        print("\nPrint Student Information")
+        print('-' * 30)
+        print(f"\nName: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"CGPA: {self.cgpa}")
+
+
+teacher = Teacher('Mokaddes', 40, "CSE")
+
+
+student = Student("Mahir", 25, 4.00)
+
+teacher.show_info()
+
+student.show_info()
+    
+
+        
