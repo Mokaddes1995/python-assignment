@@ -1,492 +1,492 @@
-# # Section 1: Programming Tasks
+# Section 1: Programming Tasks
 
-# # Task 1 (Basic Class): Create a class named Laptop with properties for brand, processor, and price. 
-# # Create an object of this class and print all its details.
+# Task 1 (Basic Class): Create a class named Laptop with properties for brand, processor, and price. 
+# Create an object of this class and print all its details.
 
-# class Laptop:
+class Laptop:
     
-#     # Constructor Method
+    # Constructor Method
     
-#     def __init__(self, brand, processor, price):
-#         self.brand = brand
-#         self.processor = processor
-#         self.price = price
+    def __init__(self, brand, processor, price):
+        self.brand = brand
+        self.processor = processor
+        self.price = price
         
-#     # Instance Method for Printing Information
+    # Instance Method for Printing Information
     
-#     def display_info(self):
+    def display_info(self):
         
-#         print(f"Brand: {self.brand}")
-#         print(f"Processor: {self.processor}")
-#         print(f"Price: {self.price}")
+        print(f"Brand: {self.brand}")
+        print(f"Processor: {self.processor}")
+        print(f"Price: {self.price}")
         
     
-# # Create an Object Named Laptop1
+# Create an Object Named Laptop1
 
-# laptop1 = Laptop("Asus", "Intel Core i7", 190000)
+laptop1 = Laptop("Asus", "Intel Core i7", 190000)
 
-# # Call Object Method for Display Information
+# Call Object Method for Display Information
 
-# laptop1.display_info()
+laptop1.display_info()
 
 
-# # Task 2
+# Task 2
 
-# ''' 
-# Task 2 (Method Implementation): Create a class Circle that takes radius as a parameter in the __init__ method. 
-# Add a method called calculated_area that returns the area of the circle (Formula: π𝑟2  ) and a  method called 
-# calculated_perimeter that returns the perimeter of the circle (Formula: 2πr).
-# '''
+''' 
+Task 2 (Method Implementation): Create a class Circle that takes radius as a parameter in the __init__ method. 
+Add a method called calculated_area that returns the area of the circle (Formula: π𝑟2  ) and a  method called 
+calculated_perimeter that returns the perimeter of the circle (Formula: 2πr).
+'''
 
-# # Import Math Module for pi
+# Import Math Module for pi
 
-# import math
+import math
 
-# class Circle:
+class Circle:
     
-#     # Constructor Method
+    # Constructor Method
     
-#     def __init__(self, radius):
+    def __init__(self, radius):
         
-#         # Take Radius Parameter
+        # Take Radius Parameter
         
-#         self.radius = radius
+        self.radius = radius
         
-#     # Instance Method for Calculated Area
+    # Instance Method for Calculated Area
     
-#     def calculated_area(self):
+    def calculated_area(self):
         
-#         area = math.pi * self.radius ** 2
+        area = math.pi * self.radius ** 2
         
-#         return area
+        return area
     
-#     # Instance Method for Calculated Perimeter
+    # Instance Method for Calculated Perimeter
     
-#     def calculated_perimeter(self):
+    def calculated_perimeter(self):
         
-#         perimeter = 2 * math.pi * self.radius
+        perimeter = 2 * math.pi * self.radius
         
-#         return perimeter
+        return perimeter
     
-#     # Instance Method for Show Information
+    # Instance Method for Show Information
     
-#     def show_information(self):
+    def show_information(self):
         
-#         # Call Calculated Area Method
+        # Call Calculated Area Method
         
-#         print(f"Area: {self.calculated_area():.6f}")
+        print(f"Area: {self.calculated_area():.6f}")
         
-#         # Call Calculated Perimeter Method 
+        # Call Calculated Perimeter Method 
         
-#         print(f"Perimeter: {self.calculated_perimeter():.6f}")
+        print(f"Perimeter: {self.calculated_perimeter():.6f}")
         
 
-# "Create an Object"
+"Create an Object"
 
-# circle1 = Circle(50)
+circle1 = Circle(50)
 
-# # Display Information
+# Display Information
 
-# circle1.show_information()
+circle1.show_information()
 
 
-# # Task 3
+# Task 3
 
-# '''
-# Task 3 (Object Manipulation): Create a Player class with name and score. 
-# Create an object, print the initial score, update the score with new value, and print the updated score.
-# '''
+'''
+Task 3 (Object Manipulation): Create a Player class with name and score. 
+Create an object, print the initial score, update the score with new value, and print the updated score.
+'''
 
-# class Player:
+class Player:
     
-#     # Constructor Method
+    # Constructor Method
     
-#     def __init__(self, name, score):
+    def __init__(self, name, score):
         
-#         self.name = name
-#         self.score = score
+        self.name = name
+        self.score = score
         
-#     # Create Instance Method for Update Score
+    # Create Instance Method for Update Score
     
-#     def update_score(self, new_score):
+    def update_score(self, new_score):
         
-#         # Give Validation for Negative Value
+        # Give Validation for Negative Value
         
-#         if new_score < 0:
+        if new_score < 0:
             
-#             raise ValueError ('Score Must Be 0 and Above!!')
+            raise ValueError ('Score Must Be 0 and Above!!')
             
-#         # Update Score with New Score
+        # Update Score with New Score
             
-#         self.score = new_score
+        self.score = new_score
             
-#         print(f"Updated Score: {self.score}")
+        print(f"Updated Score: {self.score}")
     
-#     # Instance Method for Printing Information
+    # Instance Method for Printing Information
     
-#     def show_info(self):
+    def show_info(self):
         
-#         print(f"Name: {self.name}")
-#         print(f"Score: {self.score}")
+        print(f"Name: {self.name}")
+        print(f"Score: {self.score}")
         
     
-# # Create an Object
+# Create an Object
 
-# player1 = Player('Mahir', 30)
+player1 = Player('Mahir', 30)
 
-# # Print Name and Initial Score
+# Print Name and Initial Score
 
-# player1.show_info()
+player1.show_info()
 
-# # Print Updated Score
+# Print Updated Score
 
-# player1.update_score(60)
+player1.update_score(60)
 
 
-# # Task 4
+# Task 4
 
-# '''
-# Task 4 (Conditional Logic): Create a Temperature class. If the input 
-# temperature is above 37°C, the method check_health should print 
-# “Fever”, otherwise “Normal”
-# '''
+'''
+Task 4 (Conditional Logic): Create a Temperature class. If the input 
+temperature is above 37°C, the method check_health should print 
+“Fever”, otherwise “Normal”
+'''
 
-# class Temperature:
+class Temperature:
     
-#     # Constructor Method
+    # Constructor Method
     
-#     def __init__(self, temp):
+    def __init__(self, temp):
         
-#         self.temperature = temp
+        self.temperature = temp
         
-#     # Instance Method for Check Health
+    # Instance Method for Check Health
     
-#     def check_health(self):
+    def check_health(self):
         
-#         if self.temperature > 37:
-#             print("Fever")
-#         else:
-#             print('Normal')
+        if self.temperature > 37:
+            print("Fever")
+        else:
+            print('Normal')
             
-# # Take Input for Temperature
+# Take Input for Temperature
 
-# temp = float(input('Enter Your Temperature: '))
+temp = float(input('Enter Your Temperature: '))
 
-# # Create an Object
+# Create an Object
 
-# temperature1 = Temperature(temp)
+temperature1 = Temperature(temp)
 
-# # Call Check Health
+# Call Check Health
 
-# temperature1.check_health()
+temperature1.check_health()
 
 
-# # Task 5
+# Task 5
 
-# '''
-# Task 5 (Inheritance): Create a parent class Vehicle with a method move().
-# Create a child class Airplane that inherits from Vehicle and adds a unique method fly().
-# '''
+'''
+Task 5 (Inheritance): Create a parent class Vehicle with a method move().
+Create a child class Airplane that inherits from Vehicle and adds a unique method fly().
+'''
 
-# # Create Parent Class Vehicle
+# Create Parent Class Vehicle
 
-# class Vehicle:
+class Vehicle:
     
-#     # Instance Method
+    # Instance Method
     
-#     def move(self):
+    def move(self):
         
-#         print("The vehicle is moving.")
+        print("The vehicle is moving.")
 
 
 
-# # Create Child Class Airplane
+# Create Child Class Airplane
 
-# class Airplane(Vehicle):    # Inheritance Vehicle Class
+class Airplane(Vehicle):    # Inheritance Vehicle Class
     
-#     # Instance Method
+    # Instance Method
     
-#     # Unique Method fly
+    # Unique Method fly
     
-#     def fly(self):
+    def fly(self):
         
-#         print("The Airplane Flying")
-        
-
-# # Create an Object
-
-# airplane1 = Airplane()
-
-# # Call Inheritance Method
-
-# airplane1.move()
-
-# # Call Unique Method
-
-# airplane1.fly()
-
-
-# # Section 2: Scenario-based Challenges
-
-# '''
-
-# ATM System: Create a class named Class. The account should contain: 
-# Account number, Account holder name, Balance. Implement the following 
-# methods: deposit(), withdraw(), show_balance(). The system must: 
-# ○  Allow users to deposit and withdraw money. 
-# ○  Prevent withdrawal when the balance is insufficient. 
-# ○  Display the current balance. 
-# ○  Create at least two different accounts. 
-# ○  Perform transactions on both accounts. 
-
-# '''
-
-# class BankAccount:
-    
-#     # Constructor Method
-    
-#     def __init__(self, account_number, name, balance):
-#         self.account_number = account_number
-#         self.account_holder_name = name
-#         self.__balance = balance            # Encapsulation Method for Private Balance
-        
-#     # Instance Method 
-    
-#     # Method Show Balance
-    
-#     def show_balance(self):
-#         print(f"Balance: {self.__balance:.2f}")
-        
-#     # Method Deposit Balance
-    
-#     def deposit(self, amount):
-        
-#         # Validation for O and Negative amounts
-        
-#         if amount <= 0:
-#             raise ValueError("Amount Must be 1 and above!!")
-        
-        
-#         self.__balance += amount
-        
-#         print(f"${amount:.2f} Deposit Successful..")
-        
-#         self.show_balance()
-        
-        
-#     # Method Withdraw Balance
-    
-#     def withdraw(self, amount):
-        
-#         # Validation for 0 and Negative amounts
-        
-#         if amount <= 0:
-#             raise ValueError ("Amount Must be 1 and above!!")
-        
-#         # Prevent withdrawal when the balance is insufficient.
-        
-#         if amount > self.__balance:
-#             raise ValueError ('Insufficient Balance!!!')
-        
-#         self.__balance -= amount
-        
-#         print(f"${amount:.2f} Withdraw Successful..")
-        
-#         self.show_balance()
-    
-
-
-# # Create two different accounts.
-
-# ba1 = BankAccount(13456, "Md Mokaddes Hossain", 5000)
-
-# ba2 = BankAccount(13457, "Maimun Al Rafat", 10000)
-
-# # Display the current balance
-
-# ba1.show_balance()
-# ba2.show_balance()
-
-# # Deposit Money with Error Handling
-
-# try:
-#     ba1.deposit(5000)
-    
-# except ValueError as e:
-    
-#     print(e)
-    
-
-# try:
-#     ba2.deposit(3000)
-    
-# except ValueError as e:
-    
-#     print(e)
-    
-    
-# # Withdraw Money with Error Handling
-
-# try:
-#     ba1.withdraw(7000)
-    
-# except ValueError as e:
-    
-#     print(e)
-    
-
-# try:
-#     ba2.withdraw(12000)
-    
-# except ValueError as e:
-    
-#     print(e)
-    
-    
-
-
-# '''
-# Library Management System: Create two classes named Book and Library. 
-# In Book class, each book should contain: Title, Author, ISBN, Availability Status. 
-# In Library class, the library should provide methods to: 
-# add_method(), borrow_book(), return_book(), display_books(). The 
-
-# system should: 
-# ○  Allow books to be added to the library. 
-# ○  Display all available books. 
-# ○  Allow user to borrow a book 
-# ○  Prevent a book from being borrowed if it is already borrowed. 
-# ○  Allow borrowed books to be returned. 
-# ○  Update the availability status automatically. 
-# '''
-
-# # Create Book Class
-
-# class Book:
-    
-#     # Constructor Method
-    
-#     def __init__(self, title, author, isbn):
-        
-#         self.title = title
-#         self.author = author
-#         self.isbn = isbn
-        
-#         self.is_available = True  
+        print("The Airplane Flying")
         
 
+# Create an Object
 
-# # Create Library Class
+airplane1 = Airplane()
 
-# class Library():
+# Call Inheritance Method
+
+airplane1.move()
+
+# Call Unique Method
+
+airplane1.fly()
+
+
+# Section 2: Scenario-based Challenges
+
+'''
+
+ATM System: Create a class named Class. The account should contain: 
+Account number, Account holder name, Balance. Implement the following 
+methods: deposit(), withdraw(), show_balance(). The system must: 
+○  Allow users to deposit and withdraw money. 
+○  Prevent withdrawal when the balance is insufficient. 
+○  Display the current balance. 
+○  Create at least two different accounts. 
+○  Perform transactions on both accounts. 
+
+'''
+
+class BankAccount:
     
-#     # Constructor Method
+    # Constructor Method
     
-#     def __init__(self):
+    def __init__(self, account_number, name, balance):
+        self.account_number = account_number
+        self.account_holder_name = name
+        self.__balance = balance            # Encapsulation Method for Private Balance
         
-#         self.books = [] # Empty List for Add Book
+    # Instance Method 
+    
+    # Method Show Balance
+    
+    def show_balance(self):
+        print(f"Balance: {self.__balance:.2f}")
+        
+    # Method Deposit Balance
+    
+    def deposit(self, amount):
+        
+        # Validation for O and Negative amounts
+        
+        if amount <= 0:
+            raise ValueError("Amount Must be 1 and above!!")
+        
+        
+        self.__balance += amount
+        
+        print(f"${amount:.2f} Deposit Successful..")
+        
+        self.show_balance()
+        
+        
+    # Method Withdraw Balance
+    
+    def withdraw(self, amount):
+        
+        # Validation for 0 and Negative amounts
+        
+        if amount <= 0:
+            raise ValueError ("Amount Must be 1 and above!!")
+        
+        # Prevent withdrawal when the balance is insufficient.
+        
+        if amount > self.__balance:
+            raise ValueError ('Insufficient Balance!!!')
+        
+        self.__balance -= amount
+        
+        print(f"${amount:.2f} Withdraw Successful..")
+        
+        self.show_balance()
+    
+
+
+# Create two different accounts.
+
+ba1 = BankAccount(13456, "Md Mokaddes Hossain", 5000)
+
+ba2 = BankAccount(13457, "Maimun Al Rafat", 10000)
+
+# Display the current balance
+
+ba1.show_balance()
+ba2.show_balance()
+
+# Deposit Money with Error Handling
+
+try:
+    ba1.deposit(5000)
+    
+except ValueError as e:
+    
+    print(e)
+    
+
+try:
+    ba2.deposit(3000)
+    
+except ValueError as e:
+    
+    print(e)
+    
+    
+# Withdraw Money with Error Handling
+
+try:
+    ba1.withdraw(7000)
+    
+except ValueError as e:
+    
+    print(e)
+    
+
+try:
+    ba2.withdraw(12000)
+    
+except ValueError as e:
+    
+    print(e)
+    
+    
+
+
+'''
+Library Management System: Create two classes named Book and Library. 
+In Book class, each book should contain: Title, Author, ISBN, Availability Status. 
+In Library class, the library should provide methods to: 
+add_method(), borrow_book(), return_book(), display_books(). The 
+
+system should: 
+○  Allow books to be added to the library. 
+○  Display all available books. 
+○  Allow user to borrow a book 
+○  Prevent a book from being borrowed if it is already borrowed. 
+○  Allow borrowed books to be returned. 
+○  Update the availability status automatically. 
+'''
+
+# Create Book Class
+
+class Book:
+    
+    # Constructor Method
+    
+    def __init__(self, title, author, isbn):
+        
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+        
+        self.is_available = True  
+        
+
+
+# Create Library Class
+
+class Library():
+    
+    # Constructor Method
+    
+    def __init__(self):
+        
+        self.books = [] # Empty List for Add Book
     
             
-#     # Instance Method
+    # Instance Method
     
-#     # Method Add
+    # Method Add
     
-#     def add_method(self, book):
+    def add_method(self, book):
         
-#         self.books.append(book) # append method use for add book self.books
+        self.books.append(book) # append method use for add book self.books
     
-#     # Method borrow book
+    # Method borrow book
     
-#     def borrow_book(self, isbn):
+    def borrow_book(self, isbn):
         
-#         for book in self.books:
+        for book in self.books:
             
-#             if book.isbn == isbn:
+            if book.isbn == isbn:
         
-#                 if book.is_available:
+                if book.is_available:
             
-#                     book.is_available = False
+                    book.is_available = False
             
-#                     print("Borrow Book Successfully")
+                    print("Borrow Book Successfully")
             
-#                 else:
+                else:
             
-#                     print("Book Not Available")
+                    print("Book Not Available")
                     
-#                 return
+                return
         
-#         print("Book Not Found")
+        print("Book Not Found")
     
-#     # Method return book
+    # Method return book
     
-#     def return_book(self, isbn):
+    def return_book(self, isbn):
         
-#         for book in self.books:
+        for book in self.books:
             
-#             if book.isbn == isbn:
+            if book.isbn == isbn:
         
-#                 if not book.is_available:
+                if not book.is_available:
             
-#                     book.is_available = True
+                    book.is_available = True
             
-#                     print("Return Book Successful")
+                    print("Return Book Successful")
             
-#                 else:
+                else:
             
-#                     print("Book Available")
+                    print("Book Available")
             
-#                 return
+                return
         
-#         print("Book not Found")
+        print("Book not Found")
     
     
-#     # Method display book
+    # Method display book
     
-#     def display_books(self):
+    def display_books(self):
         
-#         for book in self.books:
-#             print(f"Title: {book.title}")
-#             print(f"Author: {book.author}")
-#             print(f"ISBN: {book.isbn}")
-#             print(f"Availability: {"Yes" if True else "No"}")
-#             print('-' * 15)
+        for book in self.books:
+            print(f"Title: {book.title}")
+            print(f"Author: {book.author}")
+            print(f"ISBN: {book.isbn}")
+            print(f"Availability: {"Yes" if True else "No"}")
+            print('-' * 15)
         
         
 
-# # Crate Book Object
+# Crate Book Object
 
-# book1 = Book("Python Programming", "John Smith","ISBN001")
+book1 = Book("Python Programming", "John Smith","ISBN001")
 
-# book2 = Book("Clean Code", "Robert C. Martin", "ISBN002")
+book2 = Book("Clean Code", "Robert C. Martin", "ISBN002")
 
-# book3 = Book("The Pragmatic Programmer", "Andrew Hunt", "ISBN003")
+book3 = Book("The Pragmatic Programmer", "Andrew Hunt", "ISBN003")
 
 
-# # Create Library Object
+# Create Library Object
 
-# library = Library()
+library = Library()
 
-# # Add Book
+# Add Book
 
-# library.add_method(book1)
-# library.add_method(book2)
-# library.add_method(book3)
+library.add_method(book1)
+library.add_method(book2)
+library.add_method(book3)
 
-# # Borrow Book
+# Borrow Book
 
-# library.borrow_book("ISBN003")
+library.borrow_book("ISBN003")
 
-# # Prevent Duplicate Borrow same book borrow
+# Prevent Duplicate Borrow same book borrow
 
-# library.borrow_book("ISBN003")
+library.borrow_book("ISBN003")
 
-# # Return Book
+# Return Book
 
-# library.return_book("ISBN003")
+library.return_book("ISBN003")
 
-# # Display Information
+# Display Information
 
-# library.display_books()
+library.display_books()
 
 
 '''
@@ -553,15 +553,192 @@ class Student(Person):
         print(f"Age: {self.age}")
         print(f"CGPA: {self.cgpa}")
 
+# Create teacher Object
 
 teacher = Teacher('Mokaddes', 40, "CSE")
 
+# Create Student Object
 
 student = Student("Mahir", 25, 4.00)
 
+# Show teacher information
+
 teacher.show_info()
 
-student.show_info()
-    
+# Show student information
 
+student.show_info()
+
+
+
+'''
+Optional Task: (It may add extra marks) 
+●  E-Commerce Order System:  
+Create the following classes: 
+○  Product 
+○  Customer 
+○  Order 
+Product should contain: Product name, Price, Quantity, and method 
+total_price().  
+Customer should contain: Customer name, Customer ID 
+Order should: 
+○  Contain customer name 
+○  Contain multiple products. 
+○  Calculate the subtotal. 
+○  Apply a discount. 
+○  Calculate the final price. 
+○  Methods are: add_products(), subtotal(), discount(), final_price(), 
+display_order() 
+Discount Rule: If the subtotal is greater than 10,000, apply a 10% 
+discount. Otherwise, no discount should be applied. 
+Requirements: Create a customer, add multiple products to an order, and 
+display: Customer Name, Products, Subtotal, Discount, Final Price. 
+'''
+
+# Create Product Class
+
+class Product:
+    
+    # Constructor Method
+    
+    def __init__(self, product_name, price, quantity):
         
+        self.product_name = product_name
+        
+        self.price = price
+        
+        self.quantity = quantity
+        
+    
+    # Instance Method for Total Price
+    
+    def total_price(self):
+        
+        total_price = self.price * self.quantity
+        
+        return total_price
+
+
+# Create Customer Class
+
+class Customer:
+    
+    # Constructor Method
+    
+    def __init__(self, name, customer_id):
+        
+        self.name = name
+          
+        self.customer_id = customer_id  
+        
+
+# Create Order Class
+
+class Order:
+    
+    # Constructor Method
+    
+    def __init__(self, customer):       # Use Association for customer name
+        
+        self.customer = customer
+        
+        self.products = []      # Empty List for add products
+        
+    
+    # Instance Method
+    
+    def add_products(self, product):
+        
+        self.products.append(product)      # add Product to self.products
+    
+    
+    # Subtotal
+    
+    def subtotal(self):
+
+        return sum(product.total_price() for product in self.products)
+    
+    
+    # Apply Discount
+    
+    def discount(self):
+        
+        if self.subtotal() > 10000:
+            
+            discount_price = self.subtotal() * 10 /100
+            
+            return discount_price
+        
+        else:
+            
+            return 0
+        
+        
+    # Final Price
+    
+    def final_price(self):
+        
+        return self.subtotal() - self.discount()
+        
+    
+    # Display info
+    
+    def display_order(self):
+        
+        print(f"Customer Name: {customer.name}")
+        
+        print(f"Products: ")
+        
+        for product in self.products:
+            
+            print(f"{product.product_name} - {product.quantity} x {product.price} = {product.quantity * product.price}")
+            
+        print(f"\nSub total = {self.subtotal()}")
+        
+        print(f"Discount = {self.discount()}")
+        
+        print("-" * 20)
+        
+        print(f"Final Price = {self.subtotal() - self.discount()}")
+            
+            
+# Create Product Object
+
+product1 = Product(product_name= "Laptop", quantity= 2 , price= 3000)
+
+product2 = Product(product_name= 'Mouse', quantity= 3, price= 500)
+
+product3 = Product(product_name= "Keyboard", quantity= 2, price= 500)
+
+
+# Create Customer Object
+
+customer = Customer('Rahim', 'CUS-0001')
+
+
+# Create Order Object
+
+order1 = Order(customer)
+
+# Add Products
+
+order1.add_products(product1)
+order1.add_products(product2)
+order1.add_products(product3)
+
+
+# Call Sub total
+
+order1.subtotal()
+
+# Call apply discount
+
+order1.discount()
+
+# Call Final Price
+
+order1.final_price()
+
+# Call display information
+
+order1.display_order()
