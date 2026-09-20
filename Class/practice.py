@@ -83,11 +83,13 @@
 #     print(f"{amount} Deposit Successful")
 #     print(f"Balanced : {balance}")
     
-# Task 5: Prime Number Checker
+# # Task 5: Prime Number Checker
 
-num1 = int(input())
-num2 = int(input())
+# num1 = int(input())
+# num2 = int(input())
 
-remainder = num1 % num2
+# remainder = num1 % num2
 
-print(remainder)
+# print(remainder)
+
+
