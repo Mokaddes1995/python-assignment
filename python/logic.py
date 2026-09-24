@@ -146,3 +146,13 @@ print(f"Discount Amount: {discount_amount}")
 
 print(f"Final Price: {final_price}")
 
+
+# Day 3 — Conditions
+
+# Practice 1 — if
+
+age = 18
+
+if age >= 18:
+    print("Adult")
+
