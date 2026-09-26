@@ -166,7 +166,7 @@ if n % 2 == 0:
 else:
     print("Odd")
     
-# Practice 1 — Max Number of 3
+# Practice 3 — Max Number of 3
 
 a = 10
 
@@ -180,4 +180,71 @@ elif b > a and b > c:
     print('B Greater Than A & C')
 else:
     print("C Greater Than A & B")
+    
 
+# Practice 4 — Positive Or Negative Number
+
+n = 5
+
+if n > 0:
+    print("Positive")
+elif n < 0:
+    print("Negative")
+else:
+    print("Zero")
+    
+
+# Practice 5 — 1 to n addition
+
+n = int(input('Enter Number: '))
+
+total = 0
+
+for i in range(1, n+1):
+    
+    total += i
+
+print(total) 
+
+
+
+# Practice 6
+
+n = int(input('Enter Number: '))
+
+total = 0
+
+for i in str(n):
+    if i.isdigit:
+        total += 1
+
+print(total)
+
+
+# Addition of N
+
+n = int(input('Enter Number: '))
+
+total = 0
+
+for i in str(n):
+    if i.isdigit():
+        total += int(i)
+        
+print(total)
+
+
+
+n = int(input('Enter Number: '))
+
+total = 0
+
+while n > 0:
+    
+    digit = n % 10
+    
+    total += digit
+    
+    n = n  // 10
+    
+print(total)
