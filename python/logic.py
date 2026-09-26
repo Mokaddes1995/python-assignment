@@ -1,150 +1,150 @@
-# Week 1 — Fundamentals + Thinking Habit
+# # Week 1 — Fundamentals + Thinking Habit
 
-# Day 1 — Input, Output & Variables
+# # Day 1 — Input, Output & Variables
 
-# Exercise 1
+# # Exercise 1
 
-name = input("Enter Your Name: ")
+# name = input("Enter Your Name: ")
 
-age = int(input("Enter Your Age: "))
+# age = int(input("Enter Your Age: "))
 
-town = input("Enter Your Town Name: ")
+# town = input("Enter Your Town Name: ")
 
-print(f"Name: {name}")
+# print(f"Name: {name}")
 
-print(f"Age: {age}")
+# print(f"Age: {age}")
 
-print(f"Town Name: {town}")
+# print(f"Town Name: {town}")
 
-# Exercise 2
+# # Exercise 2
 
-new_age = age + 5
+# new_age = age + 5
 
-print(f"After 5 Years: {new_age}")
+# print(f"After 5 Years: {new_age}")
 
-# Exercise 3
+# # Exercise 3
 
-length = float(input("Length: "))
+# length = float(input("Length: "))
 
-width = float(input("Width: "))
+# width = float(input("Width: "))
 
-area = length * width
+# area = length * width
 
-print(f"Area = {area:.2f}")
+# print(f"Area = {area:.2f}")
 
-# Exercise 4
+# # Exercise 4
 
-celsius = float(input('Enter Your Temp: '))
+# celsius = float(input('Enter Your Temp: '))
 
-fahrenheit = (celsius * 9/5) + 32
+# fahrenheit = (celsius * 9/5) + 32
 
-print(f"{celsius} Celsius = {fahrenheit} Fahrenheit")
+# print(f"{celsius} Celsius = {fahrenheit} Fahrenheit")
 
 
-# Day 2 Exercises
+# # Day 2 Exercises
 
-# Exercise 1 — Data Types
+# # Exercise 1 — Data Types
 
-name = "Rahim"
-age = 32
-height = 5.6
-is_student = True
+# name = "Rahim"
+# age = 32
+# height = 5.6
+# is_student = True
 
-print(type(name))
-print(type(age))
-print(type(height))
-print(type(is_student))
+# print(type(name))
+# print(type(age))
+# print(type(height))
+# print(type(is_student))
 
 
-# Exercise 2 — Basic Calculator
+# # Exercise 2 — Basic Calculator
 
-first_number = int(input("First Number: "))
-second_number = int(input("Second Number: "))
+# first_number = int(input("First Number: "))
+# second_number = int(input("Second Number: "))
 
-# Addition
+# # Addition
 
-addition = first_number + second_number
+# addition = first_number + second_number
 
-# Subtraction
+# # Subtraction
 
-subtraction = first_number - second_number
+# subtraction = first_number - second_number
 
-# Multiplication
+# # Multiplication
 
-multiplication = first_number * second_number
+# multiplication = first_number * second_number
 
-# Division
+# # Division
 
-division = first_number  / second_number
+# division = first_number  / second_number
 
-division_2 = first_number  // second_number
+# division_2 = first_number  // second_number
 
-print(f"Addition: {addition}")
-print(f"Subtraction: {subtraction}")
-print(f"Multiplication: {multiplication}")
-print(f"Division Float: {division}")
-print(f"Division Int: {division_2}")
+# print(f"Addition: {addition}")
+# print(f"Subtraction: {subtraction}")
+# print(f"Multiplication: {multiplication}")
+# print(f"Division Float: {division}")
+# print(f"Division Int: {division_2}")
 
 
-# Exercise 3 — Remainder
+# # Exercise 3 — Remainder
 
-number = int(input("Input Your Number: "))
+# number = int(input("Input Your Number: "))
 
-# Remainder
+# # Remainder
 
-remainder = number % 2
+# remainder = number % 2
 
-print(f"Remainder by 2 = {remainder}")
+# print(f"Remainder by 2 = {remainder}")
 
-remainder = number % 3
+# remainder = number % 3
 
-print(f"Remainder by 3 = {remainder}")
+# print(f"Remainder by 3 = {remainder}")
 
-remainder = number % 5
+# remainder = number % 5
 
-print(f"Remainder by 5 = {remainder}")
+# print(f"Remainder by 5 = {remainder}")
 
 
-# Exercise 4 — Square & Cube
+# # Exercise 4 — Square & Cube
 
-num =  int(input("Number: "))
+# num =  int(input("Number: "))
 
-square = num ** 2
+# square = num ** 2
 
-cube = num ** 3
+# cube = num ** 3
 
-print(f"Square: {square}")
+# print(f"Square: {square}")
 
-print(f"Cube: {cube}")
+# print(f"Cube: {cube}")
 
-# Exercise 5 ⭐ — Even / Odd
+# # Exercise 5 ⭐ — Even / Odd
 
-number = int(input('Number: '))
+# number = int(input('Number: '))
 
-if number % 2 != 0:
+# if number % 2 != 0:
 
-    print("Odd Number")
+#     print("Odd Number")
 
-else: 
+# else: 
 
-    print('Even Number')
+#     print('Even Number')
 
 
-# Exercise 6 ⭐⭐ — Shopping Calculation
+# # Exercise 6 ⭐⭐ — Shopping Calculation
 
-product_price = int(input("Product Price: "))
+# product_price = int(input("Product Price: "))
 
-discount = int(input("Discount: "))
+# discount = int(input("Discount: "))
 
-# Discount Amount
+# # Discount Amount
 
-discount_amount = product_price * discount // 100
+# discount_amount = product_price * discount // 100
 
-final_price = product_price - discount_amount
+# final_price = product_price - discount_amount
 
-print(f"Discount Amount: {discount_amount}")
+# print(f"Discount Amount: {discount_amount}")
 
-print(f"Final Price: {final_price}")
+# print(f"Final Price: {final_price}")
 
 
 # Day 3 — Conditions
