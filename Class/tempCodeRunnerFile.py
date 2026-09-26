@@ -1,1 +1,0 @@
-print(process_text(123))     # Error
