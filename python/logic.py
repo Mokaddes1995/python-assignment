@@ -155,4 +155,29 @@ age = 18
 
 if age >= 18:
     print("Adult")
+    
+
+#  Practice 2 — Odd or Even
+
+n = 5
+
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+    
+# Practice 1 — Max Number of 3
+
+a = 10
+
+b = 20
+
+c = 40
+
+if a > b and a > c:
+    print("A Greater Than B & C")
+elif b > a and b > c:
+    print('B Greater Than A & C')
+else:
+    print("C Greater Than A & B")
 
