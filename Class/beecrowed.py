@@ -85,19 +85,28 @@
 # find_great( A, B, C)
 
 
-# Problem 1013: Consumption
+# # Problem 1013: Consumption
 
-def consumption(x, y):
+# def consumption(x, y):
     
-    mileage = x / y
+#     mileage = x / y
     
-    print(f"{mileage:.3f} km/l")
+#     print(f"{mileage:.3f} km/l")
     
 
-X = int(input())
+# X = int(input())
 
-Y = float(input())
+# Y = float(input())
 
-consumption(X, Y)
+# consumption(X, Y)
 
+import math
+
+x1, y1 = map(float, input().split())
+
+x2, y2 = map(float, input().split())
+
+distance = math.sqrt((x2-x1)**2 + (y2 - y1)**2)
+
+print(f"{distance:.4f}")
 
