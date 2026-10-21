@@ -431,30 +431,30 @@
 # print(result) 
 
 
-# Practice 16 — First Non-Repeating Character 🟠
+# # Practice 16 — First Non-Repeating Character 🟠
 
-def first_non_repeating(string):
+# def first_non_repeating(string):
     
-    freq = {}
+#     freq = {}
     
-    for i in string:
+#     for i in string:
         
-        if i in freq:
-            freq[i] += 1
-        else:
-            freq[i] = 1
+#         if i in freq:
+#             freq[i] += 1
+#         else:
+#             freq[i] = 1
             
     
-    for char, count in freq.items():
+#     for char, count in freq.items():
         
-        if count == 1:
+#         if count == 1:
             
-            return f"{char} -> {count}"
+#             return f"{char} -> {count}"
         
-    return f"No Repeating Char"
+#     return f"No Repeating Char"
     
-string = "aaebbc"
+# string = "aaebbc"
 
-result = first_non_repeating(string)
+# result = first_non_repeating(string)
 
-print(result)
+# print(result)
