@@ -102,3 +102,64 @@ for i in range(n - 1):
             
 
 print(f"Sorted Arrays: {arr}")
+
+
+
+# Extra Challenge
+
+arr = [12, 6, 9, 2, 15, 4]
+
+n = len(arr)
+
+
+for i in range(n - 1):
+    
+    swap = False
+    
+    for j in range(n - i - 1):
+        
+        if arr[j] > arr[j + 1]:
+            
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            
+            swap = True
+    
+    if not swap:
+        
+        break
+    
+    print(f"Pass No {i + 1}: {arr}")
+    
+    
+    
+
+print(f"Array: {arr}")
+
+
+# Challenge: Descending Bubble Sort
+
+arr = [17, 3, 25, 8, 12, 1]
+
+
+n = len(arr)
+
+
+for i in range(n - 1):
+    
+    swap = False
+    
+    for j in range(n - i - 1):
+        
+        if arr[j] < arr[j + 1]:
+            
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            
+            swap = True
+            
+    if not swap:
+        break
+    
+    print(f"Pass No {i + 1}: {arr}")
+    
+
+print(f"Descending Array: {arr}")
