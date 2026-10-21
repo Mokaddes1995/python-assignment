@@ -28,9 +28,13 @@ arr = [9, 7, 5, 3, 1]
 n = len(arr)
 
 
-for i in range(n // 2):
+for i in range(n - 1):
     
-    arr[i], arr[n - i - 1] = arr[n - i - 1], arr[i]
+    for j in range(n - i -1):
+        
+        if arr[j] > arr[j + 1]:
+            
+            arr[j + 1], arr[j] = arr[j], arr[j + 1]
     
 
 print(f"Reverse Arrays: {arr}")
