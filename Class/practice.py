@@ -458,3 +458,685 @@
 # result = first_non_repeating(string)
 
 # print(result)
+
+
+
+# # Exercise 1 — Positive or Negative
+
+# number = int(input("Enter a number: "))
+
+# if number >= 0:
+#     print("Positive Number")
+# else:
+#     print("Negative Number")
+
+
+
+# # Exercise 2 — Multiplication Table
+
+# n = int(input("Enter a number: "))
+
+# for i in range(1, 11):
+    
+#     print(f"{n} x {i} = {n * i}")
+    
+    
+
+# # Exercise 3 — Sum of a List
+
+# numbers = [10, 20, 30, 40, 50]
+
+# total = 0
+
+
+# for num in numbers:
+    
+#     total += num
+    
+# print(f"Sum Of List: {total}")
+
+
+
+# # Exercise 4 — Count Even Numbers
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# count = 0
+
+# for i in numbers:
+    
+#     if i % 2 ==  0:
+        
+#         count += 1
+        
+
+# print(f"Total Even Numbers: {count}")
+
+
+
+# Exercise 5 একটি list থেকে সবচেয়ে বড় সংখ্যা খুঁজে বের করো।
+
+numbers = [12, 45, 7, 89, 23]
+
+max_num = numbers[0]
+
+for num in numbers:
+    
+    if num > max_num:
+        
+        max_num = num
+        
+print(f"Max Number in List: {max_num}")
+
+
+# Exercise 6 — Function দিয়ে Largest Number বের করো
+
+def find_largest(numbers):
+    
+    max_val = numbers[0]
+    
+    for num in numbers:
+        
+        if num > max_val:
+            
+            max_val = num
+            
+    return max_val
+
+numbers = [12, 45, 7, 89, 23]
+
+result = find_largest(numbers)
+
+print(result)
+
+
+
+# Exercise 7 — Find Smallest Number
+
+
+def find_smallest(numbers):
+    
+    min_val = numbers[0]
+    
+    for num in numbers:
+        
+        if num < min_val:
+            
+            min_val = num
+            
+    return min_val
+
+numbers = [12, 45, 7, 89, 23]
+
+result = find_smallest(numbers)
+
+print(result)
+
+
+#  Exercise 8 — দ্বিতীয় বৃহত্তম সংখ্যা বের করো
+
+
+def find_second_largest(numbers):
+    
+    n = len(numbers)
+    
+    for i in range(n - 1):
+        
+        for j in range(n - i - 1):
+            
+            if numbers[j] < numbers[j +1]:
+                
+                numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+                
+    return numbers[1]        
+            
+
+numbers = [12, 45, 7, 89, 23]
+
+print(find_second_largest(numbers))
+
+
+
+# Exercise 9 — Function দিয়ে দ্বিতীয় বৃহত্তম সংখ্যা বের করো
+
+def find_second_largest(numbers):
+    
+    second_largest = numbers[0]
+    
+    largest = numbers[0]
+    
+    for num in numbers:
+        
+        if num > largest:
+            
+            second_largest = largest
+            
+            largest = num
+            
+        elif num > second_largest and num < largest:
+            
+            second_largest = num
+            
+        
+    
+    return second_largest
+    
+    
+numbers = [12, 45, 7, 89, 23]
+
+print(find_second_largest(numbers))
+
+
+# Exercise 10 — দ্বিতীয় ক্ষুদ্রতম সংখ্যা
+
+def find_second_smallest(numbers):
+    
+    smallest = numbers[0]
+    
+    second_smallest = float('inf')
+    
+    for num in numbers:
+        
+        if num < smallest:
+            
+            second_smallest = smallest
+            
+            smallest = num
+            
+        
+        elif num > smallest and num < second_smallest:
+            
+            second_smallest = smallest
+            
+            
+    return second_smallest
+
+
+numbers = [15, 8, 25, 3, 12]
+
+print(find_second_smallest(numbers))
+
+
+
+# Exercise 11 একটি লিস্টে কতগুলো জোড় সংখ্যা আছে
+
+def count_even(numbers):
+    
+    count = 0
+    
+    for num in numbers:
+        
+        if num % 2 == 0:
+            
+            count += 1
+    
+    return count
+
+
+numbers = [2, 5, 8, 11, 14, 17]
+
+print(count_even(numbers))
+
+
+# Exercise 12 — জোড় সংখ্যার যোগফল
+
+def sum_even(numbers):
+    
+    total = 0
+    
+    for num in numbers:
+        
+        if num % 2 == 0:
+        
+            total +=  num
+            
+    return total
+    
+numbers = [2, 5, 8, 11, 14, 17]
+
+print(sum_even(numbers))
+
+
+# Exercise 13 — Function দিয়ে জোড় ও বিজোড় সংখ্যা আলাদা
+
+
+def get_even_numbers(numbers):
+    
+    new_list = []
+    
+    for num in numbers:
+        
+        if num % 2 == 0:
+            
+            new_list.append(num)
+            
+    return new_list
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+
+print(get_even_numbers(numbers))
+
+
+# Exercise 14 — বিজোড় সংখ্যাগুলো বের করো
+
+def get_odd_numbers(numbers):
+    
+    new_list = []
+    
+    for num in numbers:
+        
+        if num % 2 == 1:
+            
+            new_list.append(num)
+            
+    return new_list
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+
+print(get_odd_numbers(numbers))
+
+
+# Exercise 15 — Function দিয়ে সংখ্যার সংখ্যা গণনা
+
+def count_number(numbers, target):
+    
+    count = 0
+    
+    for num in numbers:
+        
+        if num == target:
+            
+            count += 1
+    
+    return count
+
+numbers = [2, 5, 2, 8, 2, 9, 5]
+
+print(count_number(numbers, 2))
+
+
+# Exercise 16 — Function দিয়ে একটি সংখ্যা প্রাইম কি না পরীক্ষা করো
+
+
+def is_prime(n):
+    
+    if n < 2:
+        
+        return False
+    
+    for i in range(2, int(n ** 0.5) + 1):
+        
+        if n % i == 0:
+            
+            return False
+            
+    return True
+
+
+print(is_prime(7))   # True
+print(is_prime(10))  # False
+
+
+# Exercise 17 — একটি লিস্ট থেকে Prime Number বের করো
+
+def get_primes(numbers):
+    
+    new_list = []
+    
+    for num in numbers:
+        
+        if is_prime(num):
+            
+            new_list.append(num)
+            
+    return new_list
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(get_primes(numbers))
+
+
+# Exercise 18 — লিস্টের সব সংখ্যার Factorial বের করো
+
+def factorial(n):
+    
+    facto = 1
+    
+    for i in range(1, n + 1):
+        
+        facto *= i
+    
+    return facto
+
+print(factorial(5))  # 120
+print(factorial(4))  # 24
+
+
+# Task: n = 5832 হলে এক এক করে সব digit বের করবে।
+
+def find_digit(n):
+    
+    n = abs(n)
+    
+    while n > 0:
+        
+        digit = n % 10
+        
+        print(digit, end=' ')
+
+        
+        n = n //10
+        
+    print()     
+
+n = 5832
+
+find_digit(n)
+
+
+# sum_digit(n) — digit-গুলোর যোগফল বের করা।
+
+def sum_digit(n):
+    
+    n = abs(n)
+    
+    total = 0 
+           
+    while n > 0:
+            
+        digit = n % 10
+            
+        total += digit
+            
+        n = n //10
+        
+    return total
+        
+
+n = 5832
+
+print(sum_digit(n))
+
+
+# count_digit(n) — মোট digit গোনা।
+
+
+def count_digit(n):
+    
+    n = abs(n)
+    
+    count = 0
+    
+    while n > 0:
+        
+        count += 1
+        
+        n = n // 10
+        
+    return count
+
+
+n = 1020503102
+
+print(count_digit(n))
+
+
+# Number reverse করো
+
+def reverse_digit(n):
+    
+    n = abs(n)
+    
+    rev = 0
+    
+    while n > 0:
+        
+        digit = n % 10
+        
+        rev = rev * 10 + digit
+        
+        n = n // 10
+        
+    return rev
+
+
+n = 1020503102
+
+print(reverse_digit(n))
+
+
+# Task 5: একটি function লেখো, যেটা সংখ্যার digit-গুলোর মধ্যে সবচেয়ে বড় digit বের করবে।
+
+def find_large_digit(n):
+    
+    n = abs(n)
+    
+    large_digit = 0
+    
+    while n > 0:
+        
+        digit = n % 10
+        
+        if digit > large_digit:
+            
+            large_digit = digit
+        
+        n = n // 10
+        
+    return large_digit
+
+
+n = 1020503102
+
+print(find_large_digit(n))
+
+
+# Task 6 — সবচেয়ে ছোট digit বের করো
+
+def find_smallest_digit(n):
+    
+    n = abs(n)
+    
+    smallest_digit = float('inf')
+    
+    while n > 0:
+        
+        digit = n % 10
+        
+        if digit < smallest_digit:
+            
+            smallest_digit = digit
+            
+        n = n // 10
+        
+    return smallest_digit
+
+print(find_smallest_digit(583274))
+
+print(find_smallest_digit(583274))
+
+
+# একটি function লেখো, যেটা সংখ্যায় কতবার 0 আছে তা গুনবে।
+
+
+def count_zero(n):
+    
+    n = abs(n)
+    
+    count = 0
+    
+    while n > 0:
+        
+        digit = n % 10
+        
+        if digit == 0:
+            
+            count += 1
+        
+        n = n // 10
+        
+    return count
+
+
+n = 1020503102
+
+print(count_zero(n))
+
+
+# এমন একটি function লেখো, যেটা একটি সংখ্যার জোড় digit-এর সংখ্যা গুনবে।
+
+
+def count_even_digit(n):
+    
+    n = abs(n)
+    
+    count = 0
+    
+    while n > 0:
+        
+        digit = n % 10
+        
+        if digit % 2 == 0:
+            
+            count += 1
+        
+        n = n // 10
+        
+    return count
+
+
+n = 58327460
+
+print(count_even_digit(n))
+
+
+# একটি function লেখো count_digit(n), যেটা সংখ্যাটিতে মোট কয়টি digit আছে তা return করবে।
+
+def count_digit(n):
+    
+    n = abs(n)
+    
+    count = 0
+    
+    
+    while n > 0:
+        
+        count +=1
+        
+        n = n // 10
+        
+    return count
+
+print(count_digit(58329))
+
+
+
+# Intermediate Challenge 1: Second Largest Unique Number
+
+
+def second_largest(numbers):
+    
+    large_number = None
+    
+    second_largest = None
+    
+    
+    for num in numbers:
+        
+        if large_number is None or num > large_number:
+            
+            if num != large_number:
+            
+                second_largest = large_number
+            
+                large_number = num
+            
+        elif num != large_number and (second_largest is None or num > second_largest):
+            
+            second_largest = num
+            
+    return second_largest
+
+
+print(second_largest([10, 5, 8, 20, 15]))
+
+print(second_largest([4, 4, 9, 9, 7]))
+
+print(second_largest([5, 5, 5]))
+
+print(second_largest([5, 5, 4]))
+
+
+# Intermediate Challenge 2 — Consecutive Duplicates Remove
+
+def remove_duplicates(numbers):
+    
+    new_list = []
+    
+    for num in numbers:
+        
+        if num not in new_list:
+            
+            new_list.append(num)
+    
+    return new_list
+
+
+print(remove_duplicates([1, 2, 2, 3, 1, 4, 3]))
+
+
+#  Intermediate Challenge 3 — Find the First Non-Repeating Character
+
+def first_unique_char(text):
+    
+    freq =  {}
+    
+    for char in text:
+        
+        if char not in freq:
+            
+            freq[char] = 1
+        else:
+            
+            freq[char] += 1
+    
+    
+    for x, y in freq.items():
+        
+        if y == 1:
+            
+            return x
+            
+
+print(first_unique_char("aabbcdd"))  # c
+print(first_unique_char("swiss"))   # w
+print(first_unique_char("aabb"))    # None
+
+
+# Intermediate Challenge 4 — Group Anagrams
+
+def group_anagrams(words):
+    
+    groups = {}
+    
+    for word in words:
+        
+        key = "".join(sorted(word))
+        
+        if key not in groups:
+            
+            groups[key] = []
+            
+        groups[key].append(word)
+        
+    return list(groups.values())
+
+
+
+words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+print(group_anagrams(words))
+
+''' Python function practice continue koro. Ami Intermediate Challenge 4 — Group Anagrams porjonto sesh korechi. 
+Ekhane theke porer challenge dao, ar Banglay step-by-step bujhao.'''
