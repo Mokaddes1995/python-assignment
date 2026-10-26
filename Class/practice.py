@@ -1138,5 +1138,142 @@ words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
 print(group_anagrams(words))
 
-''' Python function practice continue koro. Ami Intermediate Challenge 4 — Group Anagrams porjonto sesh korechi. 
-Ekhane theke porer challenge dao, ar Banglay step-by-step bujhao.'''
+
+# Intermediate Challenge 5 — Find the First Non-Repeating Character
+
+def first_non_repeating(text):
+    
+    freq = {}
+    
+    for char in text:
+        
+        if char not in freq:
+            
+            freq[char] = 1
+        else:
+            
+            freq[char] += 1
+            
+    
+    for key, value in freq.items():
+        
+        if value == 1:
+            
+            return key
+            
+
+print(first_non_repeating("aabbcdde"))  # "c"
+print(first_non_repeating("swiss"))      # "w"
+print(first_non_repeating("aabb"))       # None
+print(first_non_repeating("programming")) # "p"
+
+
+
+# Intermediate Challenge 6 Find the Second Largest Unique Number
+
+
+def find_second_largest(numbers):
+    
+    large_number = None
+    
+    second_largest = None
+    
+    for num in numbers:
+        
+        if large_number is None or num > large_number:
+            
+            if num != large_number:
+            
+                second_largest = large_number
+            
+                large_number = num
+        
+        elif num < large_number and (second_largest is None or num > second_largest):
+            
+            second_largest = num
+    
+    
+    return second_largest
+
+
+print(find_second_largest([10, 5, 8, 10, 7]))
+# 8
+
+print(find_second_largest([4, 4, 2, 2, 1]))
+# 2
+
+print(find_second_largest([5, 5, 5]))
+# None
+
+print(find_second_largest([-1, -5, -2]))
+# -2
+
+
+
+# Intermediate Challenge 7 — Move Zeros to the End
+
+
+def move_zeros(numbers):
+
+    # Step 1: Collect non-zero numbers
+    
+    new_list = []
+    
+    count_of_zero = 0
+    
+    for num in numbers:
+        
+        if num != 0:
+            
+            new_list.append(num)
+        
+        elif num == 0:
+            
+            count_of_zero += 1
+    
+    for _ in range(count_of_zero):
+        
+        new_list.append(0)
+        
+    
+    return new_list
+
+
+print(move_zeros([0, 1, 0, 3, 12]))
+# [1, 3, 12, 0, 0]
+
+print(move_zeros([0, 0, 1]))
+# [1, 0, 0]
+
+print(move_zeros([1, 2, 3]))
+# [1, 2, 3]
+
+print(move_zeros([0, 0, 0]))
+# [0, 0, 0]
+
+
+# Intermediate Challenge 8 — Find the Missing Number
+
+def find_missing(numbers):
+    
+    total = 0
+    
+    n = len(numbers) + 1
+    
+    for i in range(1, n + 1):
+        
+        total += i
+        
+    sum_numbers = 0
+    
+    for num in numbers:
+        
+        sum_numbers += num
+        
+        
+    missing_number = total - sum_numbers
+    
+    return missing_number
+
+answer = find_missing([1, 2, 4, 5])
+print(answer)
