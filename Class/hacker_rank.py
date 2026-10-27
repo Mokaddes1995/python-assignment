@@ -183,3 +183,25 @@ if __name__ == '__main__':
     string, max_width = input(), int(input())
     result = wrap(string, max_width)
     print(result)
+    
+
+# String Formatting
+
+def print_formatted(number):
+    
+    width = len((bin(number)[2:]))
+    
+    for i in range(1, number + 1 ):
+        
+        decimal = str(i)
+        octal = oct(i)[2:]
+        hexadecimal = hex(i).upper()[2:]
+        binary = bin(i)[2:]
+        
+        print(decimal.rjust(width), octal.rjust(width),
+              hexadecimal.rjust(width), binary.rjust(width))
+
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
