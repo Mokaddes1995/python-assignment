@@ -1,7 +1,7 @@
+
 # Program Name: Student Grade Calculator
 
 print("\nWelcome To Student Grade Calculator")
-
 
 # Take Input From User Name & Marks
 
@@ -11,7 +11,7 @@ marks = []
 
 subject = ["Math", "Physics", "English"]
 
-print("\nEnter Marks (Marks Must be 0 between 100)\n")
+print("\nEnter Marks (Marks Must Be Between 0 and 100)\n")
 
 for sub in subject:
 
@@ -31,14 +31,13 @@ for sub in subject:
 
             break
 
-
-# Total Marks use sum function
+# Total Marks using sum function
 
 total_marks = sum(marks)
 
-# Average Mark
+# Calculate Average Marks
 
-average_mark = total_marks/len(marks)
+average_mark = total_marks / len(marks)
 
 # Grade Calculate
 
@@ -56,7 +55,7 @@ elif average_mark >= 60:
 
 elif average_mark >= 50:
 
-    grade = 'C'
+    grade = "C"
 
 else:
 
@@ -64,7 +63,7 @@ else:
 
 # Print Result
 
-print(f"\n{"=" * 7}Result{"=" * 7} \n")
+print(f"\n{'=' * 7}Result{'=' * 7}\n")
 
 print(f"Student Name: {name}")
 
@@ -74,6 +73,7 @@ print(f"Average Marks: {average_mark:.2f}")
 
 print(f"Grade: {grade}")
 
-print(f"\n{"*" * 22}\n")
+print(f"\n{'*' * 22}\n")
+
 
 
